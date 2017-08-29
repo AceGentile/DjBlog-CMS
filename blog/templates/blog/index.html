@@ -1,0 +1,16 @@
+{% extends 'blog/mainlayout.html' %}
+{% block content %}
+{% for post in latest_post %}
+<div class="row">
+	<div class="row align-items-center">
+    <div class="col-10" style="box-shadow: 5px 5px 2px #ecf0f1;margin-top: 2%;">
+    <h3>{{ post.post_title }}</h3>
+    <span>Type:<a href="#">{{ post.post_type }}</a> Modified:<a href="#">{{ post.post_modified }}</a></span>
+    <br/>
+    <br/>
+    <p>{{ post.post_content }}</p>
+    </div>
+    </div>
+</div>
+{% endfor %}
+{% endblock content %}
