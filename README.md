@@ -14,6 +14,11 @@
 
 	That´s all!
 
+## Screenshots
+	
+	![alt text](https://raw.githubusercontent.com/joaquinpco/DjBlog-CMS/master/blog.png)
+	![alt text](https://raw.githubusercontent.com/joaquinpco/DjBlog-CMS/master/djadmin.png)
+
 ## License
 
 	Copyright 2017 José Joaquín Pérez-Calderón Ortiz
