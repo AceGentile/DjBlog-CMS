@@ -15,8 +15,11 @@
 	That´s all!
 
 ## Screenshots
-	
+
+Django CMS main screen
 ![alt text](https://raw.githubusercontent.com/joaquinpco/DjBlog-CMS/master/blog.png)
+
+Django CMS admin screen
 ![alt text](https://raw.githubusercontent.com/joaquinpco/DjBlog-CMS/master/djadmin.png)
 
 ## License
