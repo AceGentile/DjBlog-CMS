@@ -16,8 +16,8 @@
 
 ## Screenshots
 	
-	![alt text](https://raw.githubusercontent.com/joaquinpco/DjBlog-CMS/master/blog.png)
-	![alt text](https://raw.githubusercontent.com/joaquinpco/DjBlog-CMS/master/djadmin.png)
+![alt text](https://raw.githubusercontent.com/joaquinpco/DjBlog-CMS/master/blog.png)
+![alt text](https://raw.githubusercontent.com/joaquinpco/DjBlog-CMS/master/djadmin.png)
 
 ## License
 
