@@ -1,4 +1,5 @@
 {% extends 'blog/mainlayout.html' %}
+{% load custom_tags %}
 {% block content %}
 <div class="row">
 
@@ -10,24 +11,25 @@
           </h1>
 
           {% for posts in latest_post %}
-          <!-- Blog Post -->
-          <div class="card mb-4">
-            <img class="card-img-top" src="http://placehold.it/750x300" alt="Card image cap">
-            <div class="card-body">
-              <h2 class="card-title">{{ posts.post_title }}</h2>
-              <p class="card-text" id="word_wrapped">{{ posts.post_content}}</p>
-              <a href="#" class="btn btn-primary">Read More &rarr;</a>
-            </div>
-            <div class="card-footer text-muted">
-              Posted on {{ posts.post_modified }} by
-              <a href="#">{{ posts.post_author_id }}</a>
-            </div>
-          </div>
-
+          	{% if posts.post_type == "post" %}
+	          <!-- Blog Post -->
+	          <div class="card mb-4">
+	            <img class="card-img-top" src="http://placehold.it/750x300" alt="Card image cap">
+	            <div class="card-body">
+	              <h2 class="card-title">{{ posts.post_title }}</h2>
+	              <p class="card-text" id="word_wrapped">{{ posts.post_content}}</p>
+	              <a href="#" class="btn btn-primary">Read More &rarr;</a>
+	            </div>
+	            <div class="card-footer text-muted">
+	              Posted on {{ posts.post_modified }} by <a href="#">{% get_username_from_userid posts.post_author_id %}</a>
+	            </div>
+	          </div>
+	          {% endif %}
           {% endfor %}
 
 
           <!-- Pagination -->
+          {% if latest_post|length > 4 %}
           <ul class="pagination justify-content-center mb-4">
             <li class="page-item">
               <a class="page-link" href="#">&larr; Older</a>
@@ -36,6 +38,7 @@
               <a class="page-link" href="#">Newer &rarr;</a>
             </li>
           </ul>
+          {% endif %}
 
         </div>
 

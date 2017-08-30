@@ -6,7 +6,7 @@ from .models import Dj_post
 
 # Create your views here.
 def index(request):
-	latest_post = Dj_post.objects.all()
+	latest_post = Dj_post.objects.order_by('-id')
 	template = loader.get_template('blog/index.html')
 	context = {
 		'latest_post' : latest_post,
