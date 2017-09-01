@@ -3,9 +3,19 @@ from django.contrib.auth.models import User
 from datetime import datetime
 
 # Create your models here.
+#Category
+class Dj_category(models.Model):
+	category_name = models.CharField(max_length=200)
+	category_slug = models.CharField(max_length=200)
+	category_description = models.TextField()
+
+	def  __str__(self):
+		return self.category_name
+
 #User´s posts
 class Dj_post(models.Model):
 	post_author = models.ForeignKey(User)
+	post_category_id = models.ForeignKey(Dj_category,on_delete=models.CASCADE, null=True)
 	post_date = models.DateTimeField(default=datetime.now, blank=True)
 	post_title = models.CharField(max_length=150)
 	post_content = models.TextField()
