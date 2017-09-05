@@ -67,7 +67,10 @@
                   <ul class="list-unstyled mb-0">
                     {% for category in categories %}
                     <li>
-                      <a href="{{ category.id }}">{{ category.category_name }}</a>
+                      <button type="button" class="btn btn-secondary" data-toggle="tooltip" data-placement="top" title="{{ category.category_description|truncatechars:69  }}">
+                        <a href="{{ category.category_slug }}">{{ category.category_name }}</a>
+                      </button>
+
                     </li>
                     {% endfor %}
                   </ul>
